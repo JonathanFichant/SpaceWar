@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - MagneticObject
+  - Missile
   layers:
   - Default
   - TransparentFX

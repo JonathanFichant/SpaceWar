@@ -5,14 +5,15 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private Rigidbody rb;
-    public float speedBullet = 5f;
+    private float speedBullet;
     public float timerDestruction;
 
     void Start()
     {
-        timerDestruction = 6f;
+        speedBullet = 900;
+        timerDestruction = 2.5f;
         rb = GetComponent<Rigidbody>();
-        rb.velocity = transform.up * speedBullet;
+        rb.velocity = transform.up * speedBullet * Time.deltaTime;
         Destroy(gameObject, timerDestruction);
     }
 
