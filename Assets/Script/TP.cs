@@ -6,24 +6,53 @@ public class TP : MonoBehaviour
 {
     private Camera mainCamera;
 
+
     void Start()
     {
         mainCamera = Camera.main;
+     
     }
 
     void Update()
     {
+ 
         IsObjectVisible();
     }
 
     void IsObjectVisible()
     {
-        Vector3 currentPosition = transform.position;
-        Bounds objectBounds = GetComponent<Renderer>().bounds;
+        float cameraHeight = 2f * mainCamera.orthographicSize;
+        float cameraWidth = cameraHeight * mainCamera.aspect;
+        float cameraLeftBound = mainCamera.transform.position.x - cameraWidth / 2;
+        float cameraRightBound = mainCamera.transform.position.x + cameraWidth / 2;
+        float cameraBottomBound = mainCamera.transform.position.y - cameraHeight / 2;
+        float cameraTopBound = mainCamera.transform.position.y + cameraHeight / 2;
+        Vector3 objectPosition = transform.position;
+
+        if (transform.position.x <= cameraLeftBound || transform.position.x > cameraRightBound)
+        {
+            objectPosition.x *= -1;
+
+            // Appliquer la nouvelle position à l'objet
+            transform.position = objectPosition;
+        }
+
+        if (transform.position.y <= cameraBottomBound || transform.position.y > cameraTopBound)
+        {
+            objectPosition.y *= -1;
+
+            // Appliquer la nouvelle position à l'objet
+            transform.position = objectPosition;
+        }
+
+        /*Vector3 currentPosition = transform.position;
+        Bounds objectBounds = GetComponent<Collider>().bounds;
         float screenWidth = Screen.width;
         float screenHeight = Screen.height;
         Vector3 screenBottomLeft = mainCamera.WorldToScreenPoint(objectBounds.min);
         Vector3 screenTopRight = mainCamera.WorldToScreenPoint(objectBounds.max);
+        //Vector3 screenBottomLeft = mainCamera.ScreenToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane));
+        //Vector3 screenTopRight = mainCamera.ScreenToWorldPoint(new Vector3(screenWidth, screenHeight, mainCamera.nearClipPlane));
 
         if (screenTopRight.y < 0 || screenBottomLeft.y > screenHeight)
         {
@@ -39,10 +68,10 @@ public class TP : MonoBehaviour
 
         // Appliquez la nouvelle position à l'objet
         transform.position = currentPosition;
-
+        */
     }
 
-    void OnBecameInvisible()
+    /*void OnBecameInvisible()
     {
         // Appeler la fonction pour téléporter l'objet de l'autre côté de l'écran
         TeleportToOppositeSide();
@@ -84,4 +113,5 @@ public class TP : MonoBehaviour
         // Appliquer la nouvelle position à l'objet
         transform.position = newPosition;
     }
+    */
 }

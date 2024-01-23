@@ -9,6 +9,7 @@ public class Attraction : MonoBehaviour
 
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -22,7 +23,7 @@ public class Attraction : MonoBehaviour
 
         foreach (Collider collider in colliders)
         {
-            if (collider.CompareTag("MagneticObject"))
+            //if (collider.CompareTag("MagneticObject"))
             {
                 Rigidbody rb = collider.GetComponent<Rigidbody>();
                 if (rb != null)

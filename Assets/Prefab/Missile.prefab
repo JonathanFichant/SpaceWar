@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7587589751631786963}
   - component: {fileID: 566156119099058733}
   - component: {fileID: 1392967615294775224}
+  - component: {fileID: 8315560623277995974}
   m_Layer: 0
   m_Name: Missile
   m_TagString: MagneticObject
@@ -145,5 +146,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68e15511d704a61479354651a9f622e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedBullet: 5
+--- !u!114 &8315560623277995974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461844145330273549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bbefed2d6ab61409716c9245a143f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

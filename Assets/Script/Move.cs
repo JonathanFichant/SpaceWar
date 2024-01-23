@@ -16,7 +16,7 @@ public class Move : MonoBehaviour
 
     void Start()
     {
-        acceleration = 40f;
+        acceleration = 4f;
         speedRotation = 120f;
         maxSpeed = 15f;
         cdDash = 3f;
@@ -57,7 +57,9 @@ public class Move : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow) || (Input.GetKey(KeyCode.W))) //Z
         {
             //Poussée avant du vaisseau
-            rb.AddForce(transform.up, ForceMode.Force);
+            rb.AddForce(transform.up*acceleration, ForceMode.Force);
+            
+            //rb.velocity += transform.up * acceleration;
         }
     }
     /*

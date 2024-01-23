@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TPWhiteHole : MonoBehaviour
 {
+    public Transform WhiteHole;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,11 @@ public class TPWhiteHole : MonoBehaviour
         
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        Transform otherTransform = other.transform;
+        otherTransform.position = WhiteHole.position;
+    }
     //réduire la hitbox effective du trou noir
     //oncollide tp sur la position du trou blanc, direction aléatoire, annulation de la vitesse, 
 
