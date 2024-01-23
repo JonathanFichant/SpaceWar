@@ -16,9 +16,9 @@ public class Move : MonoBehaviour
 
     void Start()
     {
-        acceleration = 4f;
-        speedRotation = 1.5f;
-        maxSpeed = 10f;
+        acceleration = 40f;
+        speedRotation = 120f;
+        maxSpeed = 15f;
         cdDash = 3f;
         dashAvailable = true;
         timerDash = cdDash;
@@ -30,9 +30,10 @@ public class Move : MonoBehaviour
     {
         Rotate();
         MoveForward();
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
         //Dash();
         //RecoveryDash();
-        
+
 
         vel = rb.velocity; // corriger la vitesse max
     }
@@ -42,12 +43,12 @@ public class Move : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow) || (Input.GetKey(KeyCode.A))) // Q
         {
             //rotation du vaisseau sens anti horaire
-            transform.Rotate(0, 0, speedRotation);
+            transform.Rotate(0, 0, speedRotation * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.RightArrow) || (Input.GetKey(KeyCode.D)))
         {
             //rotation du vaisseau sens horaire
-            transform.Rotate(0, 0, -speedRotation);
+            transform.Rotate(0, 0, -speedRotation * Time.deltaTime);
         }
     }
 
@@ -57,8 +58,6 @@ public class Move : MonoBehaviour
         {
             //Poussée avant du vaisseau
             rb.AddForce(transform.up, ForceMode.Force);
-            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
-            //currentSpeed += acceleration * Time.deltaTime;
         }
     }
     /*

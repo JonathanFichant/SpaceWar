@@ -4,6 +4,44 @@ using UnityEngine;
 
 public class TP : MonoBehaviour
 {
+    private Camera mainCamera;
+
+    void Start()
+    {
+        mainCamera = Camera.main;
+    }
+
+    void Update()
+    {
+        IsObjectVisible();
+    }
+
+    void IsObjectVisible()
+    {
+        Vector3 currentPosition = transform.position;
+        Bounds objectBounds = GetComponent<Renderer>().bounds;
+        float screenWidth = Screen.width;
+        float screenHeight = Screen.height;
+        Vector3 screenBottomLeft = mainCamera.WorldToScreenPoint(objectBounds.min);
+        Vector3 screenTopRight = mainCamera.WorldToScreenPoint(objectBounds.max);
+
+        if (screenTopRight.y < 0 || screenBottomLeft.y > screenHeight)
+        {
+            // Sortie par le haut, inversez la coordonnée Y
+            currentPosition.y *= -1f;
+        }
+
+        if (screenBottomLeft.x < 0 || screenTopRight.x > screenWidth)
+        {
+            // Sortie par les côtés gauche ou droit, inversez la coordonnée X
+            currentPosition.x *= -1f;
+        }
+
+        // Appliquez la nouvelle position à l'objet
+        transform.position = currentPosition;
+
+    }
+
     void OnBecameInvisible()
     {
         // Appeler la fonction pour téléporter l'objet de l'autre côté de l'écran

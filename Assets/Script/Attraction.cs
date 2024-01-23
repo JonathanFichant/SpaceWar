@@ -9,8 +9,6 @@ public class Attraction : MonoBehaviour
 
     void Start()
     {
-        // Black hole 2/20
-        // White hole -1/20
     }
 
     // Update is called once per frame
@@ -30,7 +28,13 @@ public class Attraction : MonoBehaviour
                 if (rb != null)
                 {
                     Vector3 forceDirection = transform.position - collider.transform.position;
-                    rb.AddForce(attractionForce * forceDirection.normalized);
+                    float distanceSquared = forceDirection.sqrMagnitude;
+
+                    // Ajustez l'attraction en fonction de la distance
+                    float adjustedAttractionForce = attractionForce / distanceSquared;
+
+                    // Ajoutez la force avec l'ajustement
+                    rb.AddForce(adjustedAttractionForce * forceDirection.normalized);
                 }
             }
         }
