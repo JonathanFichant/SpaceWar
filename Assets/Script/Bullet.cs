@@ -10,8 +10,8 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        speedBullet = 900;
-        timerDestruction = 2.5f;
+        speedBullet = 1500;
+        timerDestruction = 6f;
         rb = GetComponent<Rigidbody>();
         rb.velocity = transform.up * speedBullet * Time.deltaTime;
         Destroy(gameObject, timerDestruction);

@@ -55,14 +55,14 @@ public class MoveEnemy : MonoBehaviour
             Shot();
         }
         transform.up = playerPosition - enemyPosition;
-        Debug.Log(distanceToPlayer);
+        transform.Rotate(Vector3.forward, 90f);
     }
     void Shot()
     {
         if (isShooting == false)
         {
             isShooting = true;
-            Instantiate(missile, transform.position, transform.rotation);
+            Instantiate(missile, transform.position, transform.rotation* Quaternion.Euler(0f, 0f, -90f));
         }
         
     }

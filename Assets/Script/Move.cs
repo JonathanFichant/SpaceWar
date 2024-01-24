@@ -16,9 +16,9 @@ public class Move : MonoBehaviour
 
     void Start()
     {
-        acceleration = 4f;
+        acceleration = 3f;
         speedRotation = 120f;
-        maxSpeed = 15f;
+        maxSpeed = 10f;
         cdDash = 3f;
         dashAvailable = true;
         timerDash = cdDash;
