@@ -10,8 +10,8 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        speedBullet = 1500;
-        timerDestruction = 6f;
+        speedBullet = 400;
+        timerDestruction = 3f;
         rb = GetComponent<Rigidbody>();
         rb.velocity = transform.up * speedBullet * Time.deltaTime;
         Destroy(gameObject, timerDestruction);
@@ -21,5 +21,15 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("Ship"))
+        {
+            Life lifeScript = collision.gameObject.GetComponent<Life>();
+            lifeScript.LoseLife();
+            Destroy(gameObject);
+        }
     }
 }

@@ -9,7 +9,7 @@ public class spawnEnemy : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("Asteroid", 0f, 10f);
+        InvokeRepeating("Asteroid", 0f, 15f);
     }
 
     void Asteroid()

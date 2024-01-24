@@ -19,10 +19,10 @@ public class MoveEnemy : MonoBehaviour
 
     void Start()
     {
-        timerShoot = 0f ;
+        timerShoot = 0f;
         GameObject ObjectPlayer = GameObject.Find("parentShip");
         player = ObjectPlayer.transform;
-        
+
     }
 
     void Update()
@@ -68,9 +68,20 @@ public class MoveEnemy : MonoBehaviour
         if (isShooting == false)
         {
             isShooting = true;
-            Instantiate(missile, transform.position, transform.rotation* Quaternion.Euler(0, 0, -90f));
+            Transform canonTransform = transform.Find("Canon");
+
+            Instantiate(missile, canonTransform.position, transform.rotation * Quaternion.Euler(0, 0, -90f));
         }
-        
+
     }
 
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("Missile"))
+        {
+            Life lifeScript = gameObject.GetComponent<Life>();
+            lifeScript.LoseLife();
+        }
+
+    }
 }

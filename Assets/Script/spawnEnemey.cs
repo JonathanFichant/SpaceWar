@@ -9,7 +9,7 @@ public class spawnEnemey : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("SpawnEnemiShip", 0f, 10f);
+        InvokeRepeating("SpawnEnemiShip", 0f, 20f);
     }
 
     void SpawnEnemiShip()

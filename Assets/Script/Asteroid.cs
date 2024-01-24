@@ -54,6 +54,11 @@ public class Asteroid : MonoBehaviour
             // rajouter du fx de destruction d'astéroides ici, différencier petits et gros
             
         }
+        if (collision.gameObject.CompareTag("Ship"))
+        {
+            Life lifeScript = collision.gameObject.GetComponent<Life>();
+            lifeScript.LoseLife();
+        }
     }
 
 }

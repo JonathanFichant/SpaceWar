@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MagneticObject
   - Missile
+  - Ship
   layers:
   - Default
   - TransparentFX

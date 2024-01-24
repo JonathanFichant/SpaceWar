@@ -16,7 +16,8 @@ public class Shoot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(missile, transform.position, transform.rotation);
+            Transform canonTransform = transform.Find("Canon");
+            Instantiate(missile, canonTransform.position, transform.rotation);
         }
     }
 }
