@@ -38,11 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< Updated upstream
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
-=======
   m_IndirectSpecularColor: {r: 0.00677101, g: 0.010126915, b: 0.019731699, a: 1}
->>>>>>> Stashed changes
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1151,36 +1147,12 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-<<<<<<< Updated upstream
---- !u!114 &893116657
-MonoBehaviour:
-=======
 --- !u!1 &1019763661
 GameObject:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
-  m_GameObject: {fileID: 893116654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 3
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_RenderingLayers: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_ShadowRenderingLayers: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 0
-=======
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1019763662}
@@ -1207,7 +1179,6 @@ Transform:
   - {fileID: 1620975586}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
 --- !u!1 &1032517145
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,11 +2146,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805025430}
   m_CullTransparentMesh: 1
-<<<<<<< Updated upstream
---- !u!1 &2011706459
-=======
 --- !u!1 &1856736373
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2187,34 +2154,21 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
   - component: {fileID: 2011706461}
   - component: {fileID: 2011706460}
   m_Layer: 0
   m_Name: BlackHoleGaelle
-=======
-  - component: {fileID: 1856736375}
-  - component: {fileID: 1856736374}
-  m_Layer: 0
-  m_Name: CreateManager
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
---- !u!212 &2011706460
-SpriteRenderer:
-=======
 --- !u!114 &1856736374
 MonoBehaviour:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 2011706459}
   m_Enabled: 1
   m_CastShadows: 0
@@ -2262,38 +2216,20 @@ MonoBehaviour:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2011706461
-=======
-  m_GameObject: {fileID: 1856736373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5086084552ab91c4788b3c33cee8dcaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1856736375
->>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 2011706459}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.784305, y: -2.4034126, z: 2.31}
-=======
-  m_GameObject: {fileID: 1856736373}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.418418, y: -2.2604887, z: -5.9043465}
->>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &2035472574
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,7 +2324,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
->>>>>>> Stashed changes
 --- !u!1 &2090783282
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,11 +2564,7 @@ SceneRoots:
   - {fileID: 690620756}
   - {fileID: 1608329381}
   - {fileID: 695391364}
-<<<<<<< Updated upstream
-  - {fileID: 2011706461}
-=======
   - {fileID: 1328069308810697937}
   - {fileID: 1114052568}
   - {fileID: 1019763662}
   - {fileID: 1856736375}
->>>>>>> Stashed changes
