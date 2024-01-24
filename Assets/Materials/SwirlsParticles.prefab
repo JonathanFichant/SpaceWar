@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4841335064396098615}
   - component: {fileID: 4361245829363217885}
   m_Layer: 0
-  m_Name: Swirls
+  m_Name: SwirlsParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
