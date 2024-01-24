@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6744079485756711866}
   - component: {fileID: 8613595302260051847}
   - component: {fileID: 369119785414891927}
-  - component: {fileID: 256843756380953291}
   - component: {fileID: 7187619135138551236}
   m_Layer: 0
   m_Name: EnemyShip2
@@ -87,33 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &256843756380953291
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917702403262405929}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &7187619135138551236
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -147,6 +119,7 @@ GameObject:
   - component: {fileID: 5777844944402983719}
   - component: {fileID: 6336550348336633918}
   - component: {fileID: 956564343083585711}
+  - component: {fileID: 7282913263238835098}
   m_Layer: 0
   m_Name: ParentShip2
   m_TagString: Untagged
@@ -194,13 +167,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b3b99b21773db4a9125c379e501412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5777844944402983719}
   maxApproachDistance: 15
   minShootDistance: 5
   approachSpeed: 5
   slowApproachSpeed: 2
   retreatSpeed: 3
-  missile: {fileID: 1461844145330273549, guid: f9353831fea61b545bc696ceabba3e68, type: 3}
+  missile: {fileID: 1497394423943148454, guid: 9e9a559dd0eaebb45a1081e4c266f162, type: 3}
   cdShoot: 1
   timerShoot: 0
   isShooting: 0
+  ObjectPlayer: {fileID: 0}
+--- !u!54 &7282913263238835098
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3388326235952381613}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MoveEnemy : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     public float maxApproachDistance = 15f;
     public float minShootDistance = 5f;
     public float approachSpeed = 5f;
@@ -15,14 +15,19 @@ public class MoveEnemy : MonoBehaviour
     public float cdShoot = 1f;
     public float timerShoot;
     public bool isShooting = false;
+    //public GameObject ObjectPlayer;
 
     void Start()
     {
         timerShoot = 0f ;
+        GameObject ObjectPlayer = GameObject.Find("parentShip");
+        player = ObjectPlayer.transform;
+        
     }
 
     void Update()
     {
+        Vector3 playerPosition = player.position;
 
         if (isShooting)
         {
@@ -35,12 +40,13 @@ public class MoveEnemy : MonoBehaviour
         }
 
         Vector3 enemyPosition = transform.position;
-        Vector3 playerPosition = player.position;
 
         float distanceToPlayer = Vector3.Distance(enemyPosition, playerPosition);
 
         if (distanceToPlayer > maxApproachDistance) // traque à 15+
         {
+            Debug.Log("detect joueur");
+
             transform.Translate(Vector3.Normalize(playerPosition - enemyPosition) * approachSpeed * Time.deltaTime);
         }
         else if (distanceToPlayer > minShootDistance) //inférieur à 15 mais supérieur à 5
@@ -62,7 +68,7 @@ public class MoveEnemy : MonoBehaviour
         if (isShooting == false)
         {
             isShooting = true;
-            Instantiate(missile, transform.position, transform.rotation* Quaternion.Euler(0f, 0f, -90f));
+            Instantiate(missile, transform.position, transform.rotation* Quaternion.Euler(0, 0, -90f));
         }
         
     }
